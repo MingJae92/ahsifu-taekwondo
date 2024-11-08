@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AppBar, Toolbar, Typography, Box, Button, IconButton, Menu, MenuItem, Divider } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { motion } from "framer-motion";  // Import motion from Framer Motion
+import { motion } from "framer-motion";
 
 function Navbar() {
   const [anchorEl, setAnchorEl] = useState(null);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -14,11 +16,31 @@ function Navbar() {
     setAnchorEl(null);
   };
 
+  // Scroll listener to toggle Navbar visibility
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false); // User is scrolling down
+      } else {
+        setIsVisible(true); // User is scrolling up
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
   return (
     <motion.div
       initial={{ y: -50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      animate={{ y: 0, opacity: isVisible ? 1 : 0 }}
+      transition={{ duration: 0.3 }}
     >
       <AppBar position="fixed" color="transparent" elevation={0} sx={{ width: "100%", top: 0 }}>
         <Toolbar sx={{ justifyContent: "space-between", px: { xs: 2, md: 5 } }}>
