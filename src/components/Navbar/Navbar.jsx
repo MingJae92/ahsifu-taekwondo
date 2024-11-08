@@ -29,7 +29,7 @@ function Navbar() {
 
           {/* Desktop Menu */}
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3 }}>
-            {["Home", "About", "Services", "Our Work", "Blog", "Contact"].map((item) => (
+            {["Home", "About", "Services", "Rentals", "Reviews", "Contact"].map((item) => (
               <Button key={item} color="inherit" sx={{ fontSize: "1rem", textTransform: "none" }}>
                 {item}
               </Button>
