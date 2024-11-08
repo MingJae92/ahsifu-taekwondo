@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography, Button, Grid } from '@mui/material';
 
-const CallToAction = () => {
+const MainCallToAction = () => {
   return (
     <Box
       sx={{
@@ -11,10 +11,10 @@ const CallToAction = () => {
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
-        padding: '80px 20px',
-        backgroundColor: '#333', // Dark background to reflect a martial arts vibe
+        padding: '100px 20px',
+        backgroundColor: '#222', // Dark background for intense feeling
         borderRadius: '8px',
-        boxShadow: '0px 6px 20px rgba(0, 0, 0, 0.3)', // Stronger shadow for depth
+        boxShadow: '0px 6px 25px rgba(0, 0, 0, 0.3)', // Strong shadow for impact
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -22,8 +22,8 @@ const CallToAction = () => {
       {/* Background Image */}
       <Box
         component="img"
-        src="https://via.placeholder.com/1920x1080/333333/ffffff?text=Martial+Arts" // Replace with martial arts-themed image URL
-        alt="Martial Arts Background"
+        src="https://www.google.com/url?sa=i&url=http%3A%2F%2Fm.worldtaekwondo.org%2Fwtnews%2Fview.html%3Fnid%3D132056&psig=AOvVaw0gHIkVO4GEy91oXDEFEggH&ust=1731195047657000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLDa9qfyzYkDFQAAAAAdAAAAABAJ" // Replace with intense martial arts image
+        alt="Martial Arts Action"
         sx={{
           position: 'absolute',
           top: 0,
@@ -31,7 +31,7 @@ const CallToAction = () => {
           width: '100%',
           height: '100%',
           objectFit: 'cover',
-          opacity: 0.2,
+          opacity: 0.3, // Darker opacity for better text readability
           zIndex: -1,
         }}
       />
@@ -40,63 +40,63 @@ const CallToAction = () => {
       <Typography
         variant="subtitle1"
         sx={{
-          fontWeight: 400,
-          color: '#e63946', // Red, often associated with martial arts
+          fontWeight: 600,
+          color: '#f1faee', // Light color for tagline
           marginBottom: '10px',
-          fontSize: '1.25rem',
+          fontSize: '1.5rem',
           textTransform: 'uppercase',
-          letterSpacing: '2px',
+          letterSpacing: '3px',
         }}
       >
-        Strength. Discipline. Honor.
+        Ignite Your Power Within
       </Typography>
 
       {/* Title */}
       <Typography
-        variant="h4"
+        variant="h3"
         sx={{
-          fontWeight: 600,
-          color: '#fff', // White text for contrast
-          marginBottom: '20px',
-          fontFamily: 'Martial Arts Font, sans-serif', // Use a bold and sharp font, replace with actual martial arts font if needed
+          fontWeight: 700,
+          color: '#fff',
+          marginBottom: '25px',
+          fontFamily: 'Arial, sans-serif',
+          textTransform: 'uppercase',
         }}
       >
-        Unleash Your Inner Warrior
+        Conquer Your Limits. Achieve the Impossible.
       </Typography>
 
       {/* Description */}
       <Typography
         variant="body1"
         sx={{
-          color: '#f1faee', // Light text for readability
-          maxWidth: '600px',
-          marginBottom: '40px',
-          lineHeight: 1.6,
+          color: '#f1faee', // Soft light text color
+          maxWidth: '700px',
+          marginBottom: '50px',
+          lineHeight: 1.7,
         }}
       >
-        Transform your body and mind with the power of martial arts. 
-        Unlock your potential and become a champion in every aspect of life.
+        Step into the dojo of your life and break through all barriers. Our martial arts programs will guide you to physical and mental transformation, unleashing the warrior within.
       </Typography>
 
       {/* Buttons */}
-      <Grid container spacing={2} justifyContent="center">
+      <Grid container spacing={3} justifyContent="center">
         <Grid item>
           <Button
             variant="contained"
-            color="error" // Use red to match martial arts color scheme
+            color="error" // Red button for urgency
             sx={{
-              padding: '12px 28px',
-              fontSize: '16px',
+              padding: '15px 35px',
+              fontSize: '18px',
               fontWeight: 'bold',
               textTransform: 'none',
-              borderRadius: '24px',
-              backgroundColor: '#e63946', // Martial arts red
+              borderRadius: '30px',
+              backgroundColor: '#e63946', // Red for action
               ':hover': {
                 backgroundColor: '#c0392b', // Darker red on hover
               },
             }}
           >
-            Join the Fight
+            Start Your Training
           </Button>
         </Grid>
         <Grid item>
@@ -104,11 +104,11 @@ const CallToAction = () => {
             variant="outlined"
             color="error"
             sx={{
-              padding: '12px 28px',
-              fontSize: '16px',
+              padding: '15px 35px',
+              fontSize: '18px',
               fontWeight: 'bold',
               textTransform: 'none',
-              borderRadius: '24px',
+              borderRadius: '30px',
               borderColor: '#e63946',
               color: '#e63946',
               ':hover': {
@@ -117,7 +117,7 @@ const CallToAction = () => {
               },
             }}
           >
-            Learn the Art
+            Watch a Demo
           </Button>
         </Grid>
       </Grid>
@@ -125,35 +125,35 @@ const CallToAction = () => {
       {/* Highlighted Feature */}
       <Box
         sx={{
-          marginTop: '60px',
-          padding: '20px',
+          marginTop: '70px',
+          padding: '25px',
           backgroundColor: '#1d3557', // Dark blue background
-          borderRadius: '8px',
-          boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.1)',
+          borderRadius: '10px',
+          boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.2)',
         }}
       >
         <Typography
           variant="body2"
           sx={{
             fontWeight: 500,
-            color: '#e63946', // Red text for feature
-            marginBottom: '10px',
+            color: '#f1faee', // Light color for feature heading
+            marginBottom: '15px',
           }}
         >
-          Master Your Skills
+          Unlock Your True Potential
         </Typography>
         <Typography
           variant="body1"
           sx={{
             color: '#fff',
-            fontSize: '1rem',
+            fontSize: '1.1rem',
           }}
         >
-          Harness the power of martial arts training and elevate your life to new heights.
+          Our martial arts programs are designed for people of all levels. Join now and transform both your body and mind to the highest level of mastery.
         </Typography>
       </Box>
     </Box>
   );
 };
 
-export default CallToAction;
+export default MainCallToAction;
