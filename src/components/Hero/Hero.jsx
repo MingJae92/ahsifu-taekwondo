@@ -7,8 +7,8 @@ function Hero() {
       sx={{
         width: '100vw',
         height: '100vh',
-        marginTop: '64px', // Adjust based on your navbar's height
-        position: 'relative',
+        marginTop: '64px', // Offset for fixed navbar height
+        position: 'relative', // Keeps it below the fixed navbar
         overflow: 'hidden',
       }}
     >
