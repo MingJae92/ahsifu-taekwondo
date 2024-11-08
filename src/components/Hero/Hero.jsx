@@ -5,22 +5,38 @@ function Hero() {
   return (
     <Box
       sx={{
-        height: 'calc(100vh - 128px)', // Adjust based on the combined height of navbar and footer
-        width: '100%',
-        backgroundImage: 'url("https://www.britishtaekwondo.org.uk/wp-content/uploads/2022/07/Sport-Taekwondo-Selection-Competition-Series-Event-1.-Photo-courtesy-of-All-Sports-Photography-290522-2.jpg")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        width: '100vw',
+        height: '100vh',
+        marginTop: '64px', // Adjust based on your navbar's height
         position: 'relative',
-        marginTop: '64px', // Adjust based on navbar height
-        zIndex: -1,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: 'white',
-        textAlign: 'center',
+        overflow: 'hidden',
       }}
     >
-      <Container maxWidth="sm" sx={{ position: 'relative', zIndex: 1 }}>
+      <Box
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundImage: 'url("https://www.britishtaekwondo.org.uk/wp-content/uploads/2022/07/Sport-Taekwondo-Selection-Competition-Series-Event-1.-Photo-courtesy-of-All-Sports-Photography-290522-2.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          zIndex: -1,
+        }}
+      />
+      <Container
+        maxWidth="sm"
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: '100%',
+          color: 'white',
+          textAlign: 'center',
+        }}
+      >
         <Typography variant="h2" gutterBottom>
           Transforming Workspaces for Tomorrow
         </Typography>
