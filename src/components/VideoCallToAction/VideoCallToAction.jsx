@@ -56,18 +56,14 @@ const VideoCallToAction = () => {
             repeatType: 'reverse',
           }}
         >
-          <Typography variant="h2" gutterBottom sx={{ fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>
-            Master Your Strength
-          </Typography>
+          
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          <Typography variant="h5" paragraph sx={{ maxWidth: '80%', lineHeight: 1.6 }}>
-            Begin your journey in Taekwondo and discover the power of self-discipline and resilience.
-          </Typography>
+          
         </motion.div>
 
         {/* CTA Button */}
@@ -76,15 +72,7 @@ const VideoCallToAction = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 1 }}
         >
-          <Button
-            variant="contained"
-            color="error"
-            size="large"
-            href="#join"
-            sx={{ marginTop: '20px', padding: '10px 30px', fontSize: '18px', fontWeight: 'bold' }}
-          >
-            Start Your Training
-          </Button>
+          
         </motion.div>
       </Container>
     </Box>
