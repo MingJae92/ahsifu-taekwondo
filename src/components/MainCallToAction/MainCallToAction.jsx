@@ -1,47 +1,30 @@
 import React from 'react';
 import { Box, Typography, Button, Grid } from '@mui/material';
+import { motion } from 'framer-motion';
 
 const MainCallToAction = () => {
   return (
     <Box
       sx={{
-        width: '100%', // Full width
+        width: '100%',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
         padding: '100px 20px',
-        backgroundColor: '#222', // Dark background for intense feeling
+        backgroundColor: '#222',
         borderRadius: '8px',
-        boxShadow: '0px 6px 25px rgba(0, 0, 0, 0.3)', // Strong shadow for impact
+        boxShadow: '0px 6px 25px rgba(0, 0, 0, 0.3)',
         position: 'relative',
         overflow: 'hidden',
       }}
     >
-      {/* Background Image */}
-      <Box
-        component="img"
-        src="https://www.google.com/url?sa=i&url=http%3A%2F%2Fm.worldtaekwondo.org%2Fwtnews%2Fview.html%3Fnid%3D132056&psig=AOvVaw0gHIkVO4GEy91oXDEFEggH&ust=1731195047657000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLDa9qfyzYkDFQAAAAAdAAAAABAJ" // Replace with intense martial arts image
-        alt="Martial Arts Action"
-        sx={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          opacity: 0.3, // Darker opacity for better text readability
-          zIndex: -1,
-        }}
-      />
-
-      {/* Section Tagline */}
       <Typography
         variant="subtitle1"
         sx={{
           fontWeight: 600,
-          color: '#f1faee', // Light color for tagline
+          color: '#f1faee',
           marginBottom: '10px',
           fontSize: '1.5rem',
           textTransform: 'uppercase',
@@ -51,7 +34,6 @@ const MainCallToAction = () => {
         Ignite Your Power Within
       </Typography>
 
-      {/* Title */}
       <Typography
         variant="h3"
         sx={{
@@ -65,11 +47,10 @@ const MainCallToAction = () => {
         Conquer Your Limits. Achieve the Impossible.
       </Typography>
 
-      {/* Description */}
       <Typography
         variant="body1"
         sx={{
-          color: '#f1faee', // Soft light text color
+          color: '#f1faee',
           maxWidth: '700px',
           marginBottom: '50px',
           lineHeight: 1.7,
@@ -78,21 +59,20 @@ const MainCallToAction = () => {
         Step into the dojo of your life and break through all barriers. Our martial arts programs will guide you to physical and mental transformation, unleashing the warrior within.
       </Typography>
 
-      {/* Buttons */}
       <Grid container spacing={3} justifyContent="center">
         <Grid item>
           <Button
             variant="contained"
-            color="error" // Red button for urgency
+            color="error"
             sx={{
               padding: '15px 35px',
               fontSize: '18px',
               fontWeight: 'bold',
               textTransform: 'none',
               borderRadius: '30px',
-              backgroundColor: '#e63946', // Red for action
+              backgroundColor: '#e63946',
               ':hover': {
-                backgroundColor: '#c0392b', // Darker red on hover
+                backgroundColor: '#c0392b',
               },
             }}
           >
@@ -122,12 +102,11 @@ const MainCallToAction = () => {
         </Grid>
       </Grid>
 
-      {/* Highlighted Feature */}
       <Box
         sx={{
           marginTop: '70px',
           padding: '25px',
-          backgroundColor: '#1d3557', // Dark blue background
+          backgroundColor: '#1d3557',
           borderRadius: '10px',
           boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.2)',
         }}
@@ -136,7 +115,7 @@ const MainCallToAction = () => {
           variant="body2"
           sx={{
             fontWeight: 500,
-            color: '#f1faee', // Light color for feature heading
+            color: '#f1faee',
             marginBottom: '15px',
           }}
         >
@@ -152,6 +131,24 @@ const MainCallToAction = () => {
           Our martial arts programs are designed for people of all levels. Join now and transform both your body and mind to the highest level of mastery.
         </Typography>
       </Box>
+
+      {/* Background Image with Motion Animation */}
+      <motion.div
+        initial={{ scale: 1 }}
+        animate={{ scale: 1.1 }}
+        transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundImage: 'url("https://i.redd.it/zsag68qysmeb1.jpg")', // Placeholder image
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          zIndex: 1,
+        }}
+      />
     </Box>
   );
 };
