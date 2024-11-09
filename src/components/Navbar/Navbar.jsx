@@ -51,7 +51,7 @@ function Navbar() {
 
           {/* Desktop Menu */}
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3 }}>
-            {["Home", "About", "Services", "Rentals", "Reviews", "Contact"].map((item) => (
+            {["Home", "About", "Reviews", "Contact", "Members Only"].map((item) => (
               <Button key={item} color="inherit" sx={{ fontSize: "1rem", textTransform: "none" }}>
                 {item}
               </Button>
@@ -69,12 +69,12 @@ function Navbar() {
           </Box>
 
           {/* Mobile Menu Icon */}
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
+          {/* <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton edge="start" color="inherit" onClick={handleMenuOpen}>
               <MenuIcon />
             </IconButton>
             <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
-              {["Home", "About", "Services", "Our Work", "Blog", "Contact"].map((item) => (
+              {["Home", "Timetable", "About Us", "Class", "Members Only" ].map((item) => (
                 <MenuItem key={item} onClick={handleMenuClose}>
                   {item}
                 </MenuItem>
@@ -83,7 +83,7 @@ function Navbar() {
               <MenuItem onClick={handleMenuClose}>Log In</MenuItem>
               <MenuItem onClick={handleMenuClose}>Sign Up</MenuItem>
             </Menu>
-          </Box>
+          </Box> */}
         </Toolbar>
         <Divider />
       </AppBar>
