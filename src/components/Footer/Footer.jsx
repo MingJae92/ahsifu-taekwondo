@@ -29,10 +29,10 @@ const Footer = () => {
                 transition={{ duration: 0.5 }}
               >
                 <Typography variant="h6" gutterBottom>
-                  About Denton
+                  About Ah Sifu Taekwondo
                 </Typography>
                 <Typography variant="body2" sx={{ color: 'white' }}>
-                  We are committed to providing top-notch legal services worldwide. Our values and expertise define our approach.
+                  We are committed to providing top-notch martial arts in the world!
                 </Typography>
               </motion.div>
             </Grid>
@@ -47,7 +47,7 @@ const Footer = () => {
                 <Typography variant="h6" gutterBottom>
                   Quick Links
                 </Typography>
-                {["Our Services", "Careers", "Contact Us", "Privacy Policy"].map((text) => (
+                {["About us", "Careers", "Contact Us", "Privacy Policy"].map((text) => (
                   <Box key={text} sx={{ mb: 1 }}>
                     <Link href="#" color="inherit" underline="hover">
                       {text}
@@ -68,13 +68,13 @@ const Footer = () => {
                   Contact Us
                 </Typography>
                 <Typography variant="body2" sx={{ color: 'white', mb: 1 }}>
-                  Email: contact@denton.co.uk
+                  Email: ahsifu@taekwondo.co.uk
                 </Typography>
                 <Typography variant="body2" sx={{ color: 'white', mb: 1 }}>
                   Phone: +44 123 456 7890
                 </Typography>
                 <Typography variant="body2" sx={{ color: 'white' }}>
-                  Address: 123 Denton Lane, London, UK
+                  Address: xxx-xxx-xxx
                 </Typography>
               </motion.div>
             </Grid>
