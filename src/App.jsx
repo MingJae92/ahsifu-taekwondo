@@ -7,14 +7,12 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/about" element={<Aboutus />} />
+        {/* <Route path="/about" element={<Aboutus />} />
         <Route path="/reviews" element={<Reviews />} />
         <Route path="contact" element={<Contact />} />
         <Route path="/membersonly" element={<Membersonly />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login/>} />
- 
-
+        <Route path="/login" element={<Login />} /> */}
       </Routes>
     </div>
   );

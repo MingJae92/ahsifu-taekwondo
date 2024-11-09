@@ -13,7 +13,7 @@ const MainCallToAction = () => {
         justifyContent: 'center',
         textAlign: 'center',
         padding: '100px 20px',
-        backgroundColor: '#222',
+        backgroundColor: '#111',
         borderRadius: '8px',
         boxShadow: '0px 6px 25px rgba(0, 0, 0, 0.3)',
         position: 'relative',
@@ -24,14 +24,14 @@ const MainCallToAction = () => {
         variant="subtitle1"
         sx={{
           fontWeight: 600,
-          color: '#f1faee',
+          color: '#ffb703',
           marginBottom: '10px',
-          fontSize: '1.5rem',
+          fontSize: '1.8rem',
           textTransform: 'uppercase',
-          letterSpacing: '3px',
+          letterSpacing: '4px',
         }}
       >
-        Ignite Your Power Within
+        Awaken the Warrior Spirit
       </Typography>
 
       <Typography
@@ -42,21 +42,22 @@ const MainCallToAction = () => {
           marginBottom: '25px',
           fontFamily: 'Arial, sans-serif',
           textTransform: 'uppercase',
+          letterSpacing: '1px',
         }}
       >
-        Conquer Your Limits. Achieve the Impossible.
+        Master the Art of Combat and Discipline
       </Typography>
 
       <Typography
         variant="body1"
         sx={{
-          color: '#f1faee',
+          color: '#e9ecef',
           maxWidth: '700px',
           marginBottom: '50px',
-          lineHeight: 1.7,
+          lineHeight: 1.8,
         }}
       >
-        Step into the dojo of your life and break through all barriers. Our martial arts programs will guide you to physical and mental transformation, unleashing the warrior within.
+        Embark on a journey of self-mastery and strength. Our martial arts training program empowers you to conquer both mind and body, transforming you into a true warrior.
       </Typography>
 
       <Grid container spacing={3} justifyContent="center">
@@ -80,13 +81,13 @@ const MainCallToAction = () => {
                 fontWeight: 'bold',
                 textTransform: 'none',
                 borderRadius: '30px',
-                backgroundColor: '#e63946',
+                backgroundColor: '#d62828',
                 ':hover': {
-                  backgroundColor: '#c0392b',
+                  backgroundColor: '#a4161a',
                 },
               }}
             >
-              Start Your Training
+              Begin Your Journey
             </Button>
           </motion.div>
         </Grid>
@@ -100,15 +101,15 @@ const MainCallToAction = () => {
               fontWeight: 'bold',
               textTransform: 'none',
               borderRadius: '30px',
-              borderColor: '#e63946',
-              color: '#e63946',
+              borderColor: '#d62828',
+              color: '#d62828',
               ':hover': {
-                backgroundColor: '#e63946',
+                backgroundColor: '#d62828',
                 color: '#fff',
               },
             }}
           >
-            Watch a Demo
+            Watch Our Training
           </Button>
         </Grid>
       </Grid>
@@ -117,7 +118,7 @@ const MainCallToAction = () => {
         sx={{
           marginTop: '70px',
           padding: '25px',
-          backgroundColor: '#1d3557',
+          backgroundColor: '#003049',
           borderRadius: '10px',
           boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.2)',
         }}
@@ -126,11 +127,11 @@ const MainCallToAction = () => {
           variant="body2"
           sx={{
             fontWeight: 500,
-            color: '#f1faee',
+            color: '#ffb703',
             marginBottom: '15px',
           }}
         >
-          Unlock Your True Potential
+          Discipline, Strength, Honor
         </Typography>
         <Typography
           variant="body1"
@@ -139,7 +140,7 @@ const MainCallToAction = () => {
             fontSize: '1.1rem',
           }}
         >
-          Our martial arts programs are designed for people of all levels. Join now and transform both your body and mind to the highest level of mastery.
+          Suitable for all skill levels, our martial arts programs forge resilience and discipline. Step into the world of martial arts and unlock your true power.
         </Typography>
       </Box>
 
@@ -154,7 +155,7 @@ const MainCallToAction = () => {
           left: 0,
           width: '100%',
           height: '100%',
-          backgroundImage: 'url("https://i.redd.it/zsag68qysmeb1.jpg")', // Placeholder image
+          src: 'url("https://www.google.com/url?sa=i&url=https%3A%2F%2Feuropetaekwondo.org%2Feuropean-games-2023-thrilling-day-of-taekwondo-unfolds-at-krynica-zdroj-arena%2F&psig=AOvVaw2ExL-wHIRx32RVkKtUwTbJ&ust=1731282470461000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCICFvfq30IkDFQAAAAAdAAAAABAZ")', // Replace with a martial arts themed image
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           zIndex: 1,

@@ -5,16 +5,16 @@ const CallToAction = () => {
   return (
     <Box
       sx={{
-        width: '100%', // Full width
+        width: '100%',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
         padding: '80px 20px',
-        backgroundColor: '#333', // Dark background to reflect a martial arts vibe
+        backgroundColor: '#1c1c1e', // Darker shade for an intense look
         borderRadius: '8px',
-        boxShadow: '0px 6px 20px rgba(0, 0, 0, 0.3)', // Stronger shadow for depth
+        boxShadow: '0px 6px 20px rgba(0, 0, 0, 0.5)',
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -22,7 +22,7 @@ const CallToAction = () => {
       {/* Background Image */}
       <Box
         component="img"
-        src="https://via.placeholder.com/1920x1080/333333/ffffff?text=Martial+Arts" // Replace with martial arts-themed image URL
+        src="https://via.placeholder.com/1920x1080/1c1c1e/ffffff?text=Martial+Arts" // Replace with a martial arts-themed image URL
         alt="Martial Arts Background"
         sx={{
           position: 'absolute',
@@ -31,7 +31,7 @@ const CallToAction = () => {
           width: '100%',
           height: '100%',
           objectFit: 'cover',
-          opacity: 0.2,
+          opacity: 0.15,
           zIndex: -1,
         }}
       />
@@ -40,12 +40,13 @@ const CallToAction = () => {
       <Typography
         variant="subtitle1"
         sx={{
-          fontWeight: 400,
-          color: '#e63946', // Red, often associated with martial arts
+          fontWeight: 500,
+          color: '#d32f2f', // Intense red
           marginBottom: '10px',
           fontSize: '1.25rem',
           textTransform: 'uppercase',
           letterSpacing: '2px',
+          fontFamily: '"Roboto Slab", sans-serif', // Strong font for tagline
         }}
       >
         Strength. Discipline. Honor.
@@ -55,10 +56,10 @@ const CallToAction = () => {
       <Typography
         variant="h4"
         sx={{
-          fontWeight: 600,
-          color: '#fff', // White text for contrast
+          fontWeight: 700,
+          color: '#fff',
           marginBottom: '20px',
-          fontFamily: 'Martial Arts Font, sans-serif', // Use a bold and sharp font, replace with actual martial arts font if needed
+          fontFamily: '"Oswald", sans-serif', // Bold and sharp font style
         }}
       >
         Unleash Your Inner Warrior
@@ -68,14 +69,13 @@ const CallToAction = () => {
       <Typography
         variant="body1"
         sx={{
-          color: '#f1faee', // Light text for readability
+          color: '#f4f4f4',
           maxWidth: '600px',
           marginBottom: '40px',
-          lineHeight: 1.6,
+          lineHeight: 1.7,
         }}
       >
-        Transform your body and mind with the power of martial arts. 
-        Unlock your potential and become a champion in every aspect of life.
+        Transform your body and mind with the power of martial arts. Unlock your potential and become a champion in every aspect of life.
       </Typography>
 
       {/* Buttons */}
@@ -83,16 +83,15 @@ const CallToAction = () => {
         <Grid item>
           <Button
             variant="contained"
-            color="error" // Use red to match martial arts color scheme
             sx={{
-              padding: '12px 28px',
-              fontSize: '16px',
+              padding: '14px 32px',
+              fontSize: '18px',
               fontWeight: 'bold',
               textTransform: 'none',
-              borderRadius: '24px',
-              backgroundColor: '#e63946', // Martial arts red
+              borderRadius: '32px',
+              backgroundColor: '#d32f2f',
               ':hover': {
-                backgroundColor: '#c0392b', // Darker red on hover
+                backgroundColor: '#b71c1c',
               },
             }}
           >
@@ -102,17 +101,16 @@ const CallToAction = () => {
         <Grid item>
           <Button
             variant="outlined"
-            color="error"
             sx={{
-              padding: '12px 28px',
-              fontSize: '16px',
+              padding: '14px 32px',
+              fontSize: '18px',
               fontWeight: 'bold',
               textTransform: 'none',
-              borderRadius: '24px',
-              borderColor: '#e63946',
-              color: '#e63946',
+              borderRadius: '32px',
+              borderColor: '#d32f2f',
+              color: '#d32f2f',
               ':hover': {
-                backgroundColor: '#e63946',
+                backgroundColor: '#d32f2f',
                 color: '#fff',
               },
             }}
@@ -127,7 +125,7 @@ const CallToAction = () => {
         sx={{
           marginTop: '60px',
           padding: '20px',
-          backgroundColor: '#1d3557', // Dark blue background
+          backgroundColor: '#1a237e', // Dark blue background
           borderRadius: '8px',
           boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.1)',
         }}
@@ -136,7 +134,7 @@ const CallToAction = () => {
           variant="body2"
           sx={{
             fontWeight: 500,
-            color: '#e63946', // Red text for feature
+            color: '#d32f2f',
             marginBottom: '10px',
           }}
         >
