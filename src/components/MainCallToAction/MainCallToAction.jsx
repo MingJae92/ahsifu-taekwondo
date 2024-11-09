@@ -61,23 +61,34 @@ const MainCallToAction = () => {
 
       <Grid container spacing={3} justifyContent="center">
         <Grid item>
-          <Button
-            variant="contained"
-            color="error"
-            sx={{
-              padding: '15px 35px',
-              fontSize: '18px',
-              fontWeight: 'bold',
-              textTransform: 'none',
-              borderRadius: '30px',
-              backgroundColor: '#e63946',
-              ':hover': {
-                backgroundColor: '#c0392b',
-              },
+          <motion.div
+            initial={{ scale: 1 }}
+            animate={{ scale: 1.05 }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "easeInOut",
             }}
           >
-            Start Your Training
-          </Button>
+            <Button
+              variant="contained"
+              color="error"
+              sx={{
+                padding: '15px 35px',
+                fontSize: '18px',
+                fontWeight: 'bold',
+                textTransform: 'none',
+                borderRadius: '30px',
+                backgroundColor: '#e63946',
+                ':hover': {
+                  backgroundColor: '#c0392b',
+                },
+              }}
+            >
+              Start Your Training
+            </Button>
+          </motion.div>
         </Grid>
         <Grid item>
           <Button
@@ -147,6 +158,7 @@ const MainCallToAction = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           zIndex: 1,
+          opacity: 0.3,
         }}
       />
     </Box>
