@@ -36,45 +36,7 @@ const VideoCallToAction = () => {
       />
 
       {/* CTA Content */}
-      <Container
-        component={motion.div}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
-        maxWidth="sm"
-        sx={{
-          textAlign: 'center',
-          zIndex: 1,
-        }}
-      >
-        <motion.div
-          initial={{ scale: 1 }}
-          animate={{ scale: 1.05 }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            repeatType: 'reverse',
-          }}
-        >
-          
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 1 }}
-        >
-          
-        </motion.div>
-
-        {/* CTA Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 1 }}
-        >
-          
-        </motion.div>
-      </Container>
+      
     </Box>
   );
 };

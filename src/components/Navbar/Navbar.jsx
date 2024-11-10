@@ -1,7 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { AppBar, Toolbar, Typography, Box, Button, IconButton, Menu, MenuItem, Divider } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Box,
+  Button,
+  IconButton,
+  Menu,
+  MenuItem,
+  Divider,
+} from "@mui/material";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import MenuIcon from "@mui/icons-material/Menu"; // Include the menu icon for mobile
 
 function Navbar() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -20,13 +31,11 @@ function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsVisible(false); // User is scrolling down
       } else {
         setIsVisible(true); // User is scrolling up
       }
-
       setLastScrollY(currentScrollY);
     };
 
@@ -42,48 +51,108 @@ function Navbar() {
       animate={{ y: 0, opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 0.3 }}
     >
-      <AppBar position="fixed" color="primary" elevation={4} sx={{ width: "100%", top: 0, bgcolor: "#212121" }}>
-        <Toolbar sx={{ justifyContent: "space-between", px: { xs: 2, md: 5 } }}>
-          {/* Logo */}
-          <Typography variant="h6" color="white" sx={{ fontWeight: "bold", fontFamily: "'Roboto', sans-serif" }}>
-            AH SIFU, TAEKWONDO
-          </Typography>
+      <AppBar
+        position="fixed"
+        color="primary"
+        elevation={4}
+        sx={{ width: "100%", top: 0, bgcolor: "#1C1C1C" }}
+      >
+        <Toolbar
+          sx={{ justifyContent: "space-between", px: { xs: 3, md: 6 }, py: 2 }}
+        >
+          {/* Logo with Martial Arts Icon */}
+          <Box display="flex" alignItems="center" gap={1}>
+            <Typography
+              variant="h6"
+              color="#fbc02d"
+              sx={{ fontWeight: "bold", fontFamily: "'Roboto', sans-serif" }}
+            >
+              AH SIFU, TAEKWONDO
+            </Typography>
+          </Box>
 
           {/* Desktop Menu */}
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3 }}>
-            {["Home", "About", "Reviews", "Contact", "Members Only"].map((item) => (
-              <Button key={item} color="inherit" sx={{ fontSize: "1rem", textTransform: "uppercase", fontWeight: "600" }}>
-                {item}
-              </Button>
-            ))}
+            <Link to="/" style={{ color: "#fbc02d", textDecoration: "none" }}>
+              Home
+            </Link>
+            <Link
+              to="/aboutus"
+              style={{ color: "#fbc02d", textDecoration: "none" }}
+            >
+              About Us
+            </Link>
+            <Link
+              to="/reviews"
+              style={{ color: "#fbc02d", textDecoration: "none" }}
+            >
+              Reviews
+            </Link>
+            <Link
+              to="/contact"
+              style={{ color: "#fbc02d", textDecoration: "none" }}
+            >
+              Contact
+            </Link>
+            <Link
+              to="/membersonly"
+              style={{ color: "#fbc02d", textDecoration: "none" }}
+            >
+              Members Only
+            </Link>
           </Box>
 
           {/* Sign Up and Log In Buttons */}
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
-            <Button variant="outlined" color="secondary" sx={{ textTransform: "none", borderColor: "#fbc02d", color: "#fbc02d" }}>
+            <Button
+              variant="outlined"
+              sx={{
+                textTransform: "none",
+                borderColor: "#fbc02d",
+                color: "#fbc02d",
+              }}
+            >
               Log In
             </Button>
-            <Button variant="contained" color="secondary" sx={{ textTransform: "none", backgroundColor: "#fbc02d" }}>
+            <Button
+              variant="contained"
+              sx={{ textTransform: "none", backgroundColor: "#fbc02d" }}
+            >
               Sign Up
             </Button>
           </Box>
 
           {/* Mobile Menu Icon */}
-          {/* <Box sx={{ display: { xs: "flex", md: "none" } }}>
+          <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton edge="start" color="inherit" onClick={handleMenuOpen}>
               <MenuIcon />
             </IconButton>
-            <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
-              {["Home", "Timetable", "About Us", "Class", "Members Only"].map((item) => (
-                <MenuItem key={item} onClick={handleMenuClose}>
-                  {item}
-                </MenuItem>
-              ))}
+            <Menu
+              anchorEl={anchorEl}
+              open={Boolean(anchorEl)}
+              onClose={handleMenuClose}
+            >
+              {["Home", "About Us", "Reviews", "Contact", "Members Only"].map(
+                (item) => (
+                  <MenuItem
+                    key={item}
+                    onClick={handleMenuClose}
+                    sx={{ color: "#212121" }}
+                  >
+                    <Link
+                      to={`/${item.replace(" ", "").toLowerCase()}`}
+                      style={{ color: "#212121", textDecoration: "none" }}
+                    >
+                      {item}
+                    </Link>
+                  </MenuItem>
+                )
+              )}
               <Divider />
               <MenuItem onClick={handleMenuClose}>Log In</MenuItem>
               <MenuItem onClick={handleMenuClose}>Sign Up</MenuItem>
             </Menu>
-          </Box> */}
+          </Box>
         </Toolbar>
         <Divider sx={{ bgcolor: "#fbc02d" }} />
       </AppBar>
