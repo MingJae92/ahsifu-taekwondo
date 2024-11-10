@@ -42,17 +42,17 @@ function Navbar() {
       animate={{ y: 0, opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 0.3 }}
     >
-      <AppBar position="fixed" color="transparent" elevation={0} sx={{ width: "100%", top: 0 }}>
+      <AppBar position="fixed" color="primary" elevation={4} sx={{ width: "100%", top: 0, bgcolor: "#212121" }}>
         <Toolbar sx={{ justifyContent: "space-between", px: { xs: 2, md: 5 } }}>
           {/* Logo */}
-          <Typography variant="h6" color="primary" sx={{ fontWeight: "bold" }}>
-            DENTON
+          <Typography variant="h6" color="white" sx={{ fontWeight: "bold", fontFamily: "'Roboto', sans-serif" }}>
+            AH SIFU, TAEKWONDO
           </Typography>
 
           {/* Desktop Menu */}
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3 }}>
             {["Home", "About", "Reviews", "Contact", "Members Only"].map((item) => (
-              <Button key={item} color="inherit" sx={{ fontSize: "1rem", textTransform: "none" }}>
+              <Button key={item} color="inherit" sx={{ fontSize: "1rem", textTransform: "uppercase", fontWeight: "600" }}>
                 {item}
               </Button>
             ))}
@@ -60,10 +60,10 @@ function Navbar() {
 
           {/* Sign Up and Log In Buttons */}
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
-            <Button variant="outlined" color="primary" sx={{ textTransform: "none" }}>
+            <Button variant="outlined" color="secondary" sx={{ textTransform: "none", borderColor: "#fbc02d", color: "#fbc02d" }}>
               Log In
             </Button>
-            <Button variant="contained" color="primary" sx={{ textTransform: "none" }}>
+            <Button variant="contained" color="secondary" sx={{ textTransform: "none", backgroundColor: "#fbc02d" }}>
               Sign Up
             </Button>
           </Box>
@@ -74,7 +74,7 @@ function Navbar() {
               <MenuIcon />
             </IconButton>
             <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
-              {["Home", "Timetable", "About Us", "Class", "Members Only" ].map((item) => (
+              {["Home", "Timetable", "About Us", "Class", "Members Only"].map((item) => (
                 <MenuItem key={item} onClick={handleMenuClose}>
                   {item}
                 </MenuItem>
@@ -85,7 +85,7 @@ function Navbar() {
             </Menu>
           </Box> */}
         </Toolbar>
-        <Divider />
+        <Divider sx={{ bgcolor: "#fbc02d" }} />
       </AppBar>
     </motion.div>
   );
