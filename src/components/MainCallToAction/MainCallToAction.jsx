@@ -155,7 +155,7 @@ const MainCallToAction = () => {
           left: 0,
           width: '100%',
           height: '100%',
-          src: 'url("https://www.google.com/url?sa=i&url=https%3A%2F%2Feuropetaekwondo.org%2Feuropean-games-2023-thrilling-day-of-taekwondo-unfolds-at-krynica-zdroj-arena%2F&psig=AOvVaw2ExL-wHIRx32RVkKtUwTbJ&ust=1731282470461000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCICFvfq30IkDFQAAAAAdAAAAABAZ")', // Replace with a martial arts themed image
+          backgroundImage: 'url("https://www.google.com/url?sa=i&url=https%3A%2F%2Feuropetaekwondo.org%2Feuropean-games-2023-thrilling-day-of-taekwondo-unfolds-at-krynica-zdroj-arena%2F&psig=AOvVaw2ExL-wHIRx32RVkKtUwTbJ&ust=1731282470461000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCICFvfq30IkDFQAAAAAdAAAAABAZ")', // Replace with a martial arts themed image
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           zIndex: 1,

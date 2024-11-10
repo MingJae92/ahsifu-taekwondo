@@ -1,5 +1,14 @@
 import React from 'react';
 import { Box, Typography, Button, Grid } from '@mui/material';
+import { motion } from 'framer-motion';
+
+const principles = [
+  "Courtesy",
+  "Integrity",
+  "Perseverance",
+  "Self-Control",
+  "Indomitable Spirit"
+];
 
 const CallToAction = () => {
   return (
@@ -12,17 +21,16 @@ const CallToAction = () => {
         justifyContent: 'center',
         textAlign: 'center',
         padding: '80px 20px',
-        backgroundColor: '#1c1c1e', // Darker shade for an intense look
+        backgroundColor: '#1c1c1e',
         borderRadius: '8px',
         boxShadow: '0px 6px 20px rgba(0, 0, 0, 0.5)',
         position: 'relative',
         overflow: 'hidden',
       }}
     >
-      {/* Background Image */}
       <Box
         component="img"
-        src="https://via.placeholder.com/1920x1080/1c1c1e/ffffff?text=Martial+Arts" // Replace with a martial arts-themed image URL
+        src="https://via.placeholder.com/1920x1080/1c1c1e/ffffff?text=Martial+Arts"
         alt="Martial Arts Background"
         sx={{
           position: 'absolute',
@@ -41,12 +49,12 @@ const CallToAction = () => {
         variant="subtitle1"
         sx={{
           fontWeight: 500,
-          color: '#d32f2f', // Intense red
+          color: '#d32f2f',
           marginBottom: '10px',
           fontSize: '1.25rem',
           textTransform: 'uppercase',
           letterSpacing: '2px',
-          fontFamily: '"Roboto Slab", sans-serif', // Strong font for tagline
+          fontFamily: '"Roboto Slab", sans-serif',
         }}
       >
         Strength. Discipline. Honor.
@@ -59,11 +67,34 @@ const CallToAction = () => {
           fontWeight: 700,
           color: '#fff',
           marginBottom: '20px',
-          fontFamily: '"Oswald", sans-serif', // Bold and sharp font style
+          fontFamily: '"Oswald", sans-serif',
         }}
       >
         Unleash Your Inner Warrior
       </Typography>
+
+      {/* Animated Taekwondo Principles */}
+      <Box sx={{ marginBottom: '40px' }}>
+        {principles.map((principle, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 * index, duration: 0.5 }}
+          >
+            <Typography
+              variant="h6"
+              sx={{
+                color: '#d32f2f',
+                fontWeight: 600,
+                fontFamily: '"Oswald", sans-serif',
+              }}
+            >
+              {principle}
+            </Typography>
+          </motion.div>
+        ))}
+      </Box>
 
       {/* Description */}
       <Typography
@@ -125,7 +156,7 @@ const CallToAction = () => {
         sx={{
           marginTop: '60px',
           padding: '20px',
-          backgroundColor: '#1a237e', // Dark blue background
+          backgroundColor: '#1a237e',
           borderRadius: '8px',
           boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.1)',
         }}
