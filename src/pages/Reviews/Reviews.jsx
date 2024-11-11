@@ -15,42 +15,69 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import { motion } from "framer-motion"; // Import Framer Motion
 
+// Martial Arts themed reviews
 const reviews = [
   { name: "John Doe", avatar: "https://randomuser.me/api/portraits/men/1.jpg", rating: 5, review: "Joining this dojo has been life-changing! The instructors are top-notch.", trainingDuration: "2 years" },
   { name: "Jane Smith", avatar: "https://randomuser.me/api/portraits/women/1.jpg", rating: 4, review: "A great place to learn and grow. I love the community here.", trainingDuration: "1 year" },
   { name: "Sam Lee", avatar: "https://randomuser.me/api/portraits/men/2.jpg", rating: 5, review: "The best dojo I've ever been to. Highly recommended!", trainingDuration: "3 years" },
   { name: "Ava Brown", avatar: "https://randomuser.me/api/portraits/women/2.jpg", rating: 5, review: "Amazing instructors who really care about their students.", trainingDuration: "2 years" },
-  { name: "Chris Green", avatar: "https://randomuser.me/api/portraits/men/3.jpg", rating: 4, review: "A wonderful experience every time I come here!", trainingDuration: "1 year" },
-  { name: "Olivia White", avatar: "https://randomuser.me/api/portraits/women/3.jpg", rating: 5, review: "I've learned so much and gained confidence.", trainingDuration: "2.5 years" },
-  { name: "Liam Harris", avatar: "https://randomuser.me/api/portraits/men/4.jpg", rating: 5, review: "An incredible place to grow both physically and mentally.", trainingDuration: "4 years" },
-  { name: "Emma Wilson", avatar: "https://randomuser.me/api/portraits/women/4.jpg", rating: 4, review: "Supportive environment and excellent training.", trainingDuration: "1.5 years" },
-  { name: "Mason Clark", avatar: "https://randomuser.me/api/portraits/men/5.jpg", rating: 5, review: "A fantastic community and great place to learn martial arts.", trainingDuration: "2 years" },
-  { name: "Sophia Martinez", avatar: "https://randomuser.me/api/portraits/women/5.jpg", rating: 4, review: "Very professional and dedicated instructors.", trainingDuration: "1 year" },
-  { name: "James Walker", avatar: "https://randomuser.me/api/portraits/men/6.jpg", rating: 5, review: "A great experience! Highly recommend to anyone interested.", trainingDuration: "3 years" },
-  { name: "Amelia Hall", avatar: "https://randomuser.me/api/portraits/women/6.jpg", rating: 5, review: "I've never felt more at home in a dojo. Amazing people.", trainingDuration: "2 years" },
-  { name: "Ethan Young", avatar: "https://randomuser.me/api/portraits/men/7.jpg", rating: 4, review: "Excellent training and a friendly atmosphere.", trainingDuration: "1 year" },
-  { name: "Mia Hernandez", avatar: "https://randomuser.me/api/portraits/women/7.jpg", rating: 5, review: "Everyone here is like family. I love it!", trainingDuration: "2 years" },
-  { name: "Noah King", avatar: "https://randomuser.me/api/portraits/men/8.jpg", rating: 4, review: "Well-organized and highly recommended for martial arts.", trainingDuration: "2 years" },
-  { name: "Isabella Wright", avatar: "https://randomuser.me/api/portraits/women/8.jpg", rating: 5, review: "An inspiring place to train and improve yourself.", trainingDuration: "3 years" },
-  { name: "Lucas Scott", avatar: "https://randomuser.me/api/portraits/men/9.jpg", rating: 5, review: "I've gained so much confidence and strength since joining.", trainingDuration: "4 years" },
-  { name: "Charlotte Adams", avatar: "https://randomuser.me/api/portraits/women/9.jpg", rating: 5, review: "The instructors are incredibly supportive and skilled.", trainingDuration: "2.5 years" },
-  { name: "Michael Robinson", avatar: "https://randomuser.me/api/portraits/men/10.jpg", rating: 5, review: "A fantastic place to learn and grow. Highly recommend.", trainingDuration: "2 years" },
-  { name: "Harper Carter", avatar: "https://randomuser.me/api/portraits/women/10.jpg", rating: 4, review: "Great environment and top-quality training!", trainingDuration: "1.5 years" },
+  { name: "Michael Johnson", avatar: "https://randomuser.me/api/portraits/men/3.jpg", rating: 4, review: "Great dojo with a strong focus on discipline.", trainingDuration: "1.5 years" },
+  { name: "Lily Chen", avatar: "https://randomuser.me/api/portraits/women/3.jpg", rating: 4, review: "I feel like I'm improving every day here!", trainingDuration: "6 months" },
+  { name: "David Kim", avatar: "https://randomuser.me/api/portraits/men/4.jpg", rating: 5, review: "Excellent training, friendly atmosphere.", trainingDuration: "2.5 years" },
+  { name: "Sophia Lee", avatar: "https://randomuser.me/api/portraits/women/4.jpg", rating: 5, review: "A family-friendly dojo that encourages growth.", trainingDuration: "3 years" },
+  { name: "Ethan Clark", avatar: "https://randomuser.me/api/portraits/men/5.jpg", rating: 4, review: "The dojo teaches discipline and respect, I appreciate that.", trainingDuration: "1 year" },
+  { name: "Olivia Wilson", avatar: "https://randomuser.me/api/portraits/women/5.jpg", rating: 5, review: "Every session is a learning experience. Truly a fantastic place.", trainingDuration: "2 years" },
+  { name: "James Moore", avatar: "https://randomuser.me/api/portraits/men/6.jpg", rating: 4, review: "Great facility and equipment. The classes are well-organized.", trainingDuration: "1 year" },
+  { name: "Charlotte Harris", avatar: "https://randomuser.me/api/portraits/women/6.jpg", rating: 5, review: "I love the sense of community and respect in this dojo.", trainingDuration: "1.5 years" },
+  { name: "Liam Young", avatar: "https://randomuser.me/api/portraits/men/7.jpg", rating: 5, review: "I’ve learned so much here. It’s the best decision I made!", trainingDuration: "3 years" },
+  { name: "Emma Walker", avatar: "https://randomuser.me/api/portraits/women/7.jpg", rating: 5, review: "The instructors are very professional and patient with beginners.", trainingDuration: "2 years" },
+  { name: "Lucas Allen", avatar: "https://randomuser.me/api/portraits/men/8.jpg", rating: 4, review: "I have learned a lot and improved my skills. It’s a solid dojo.", trainingDuration: "1 year" },
+  { name: "Mia Adams", avatar: "https://randomuser.me/api/portraits/women/8.jpg", rating: 5, review: "I feel more confident and strong after each class. Great place to train.", trainingDuration: "2 years" },
+  { name: "William Scott", avatar: "https://randomuser.me/api/portraits/men/9.jpg", rating: 5, review: "The training is top-notch. My fitness and skills have improved drastically.", trainingDuration: "3 years" },
+  { name: "Chloe King", avatar: "https://randomuser.me/api/portraits/women/9.jpg", rating: 4, review: "I love the atmosphere of this dojo. It’s a perfect balance of discipline and fun.", trainingDuration: "1.5 years" },
+  { name: "Benjamin Wright", avatar: "https://randomuser.me/api/portraits/men/10.jpg", rating: 5, review: "Every session helps me push my limits. The instructors are great.", trainingDuration: "2 years" },
+  { name: "Amelia Lopez", avatar: "https://randomuser.me/api/portraits/women/10.jpg", rating: 4, review: "Great learning environment with challenging yet rewarding training.", trainingDuration: "1 year" },
+  { name: "Henry Davis", avatar: "https://randomuser.me/api/portraits/men/11.jpg", rating: 5, review: "I’ve gained a lot of confidence here. The instructors push you to be your best.", trainingDuration: "2 years" }
 ];
+
 
 const Reviews = () => {
   return (
-    <Box sx={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+    <Box
+      sx={{
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        background: "url('https://your-dojo-image-link.com/dojo-background.jpg') no-repeat center center fixed", // Add a martial arts dojo background
+        backgroundSize: "cover",
+        color: "#fff",
+      }}
+    >
       {/* Navbar */}
       <Navbar />
 
       {/* Main Content */}
       <Container maxWidth="md" sx={{ py: 8, pt: 16, flex: 1 }}>
         <Box sx={{ textAlign: "center", mb: 4 }}>
-          <Typography variant="h3" fontWeight="bold" color="primary" gutterBottom>
+          <Typography
+            variant="h3"
+            fontWeight="bold"
+            color="primary"
+            gutterBottom
+            sx={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "3rem" }} // Bold font for strong impact
+          >
             What Our Students Say
           </Typography>
-          <Typography variant="body1" color="textSecondary" paragraph>
+          <Typography
+            variant="body1"
+            color="textSecondary"
+            paragraph
+            sx={{
+              fontSize: "1.2rem",
+              fontFamily: "'Roboto', sans-serif",
+              lineHeight: "1.6",
+            }}
+          >
             Our dojo is not just about learning martial arts; it’s about becoming part of a family. See how our students have transformed.
           </Typography>
         </Box>
@@ -66,20 +93,22 @@ const Reviews = () => {
               >
                 <Card
                   sx={{
-                    boxShadow: 3,
+                    boxShadow: 5,
                     borderRadius: "16px", // Rounded corners
-                    height: 300, // Fixed height
+                    height: 320, // Fixed height for uniformity
                     width: "100%", // Ensure width is 100% of the grid item
-                    backgroundColor: "#fff",
+                    backgroundColor: "rgba(0, 0, 0, 0.7)", // Dark, transparent background for dojo vibe
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "space-between",
                     overflow: "hidden", // Prevents overflow
                     textAlign: "center",
                     position: "relative", // Allows absolute positioning of the star
+                    border: "3px solid #f1c40f", // Golden border for the martial arts theme
                     "&:hover": {
                       transform: "scale(1.05)", // Scale up on hover
-                      boxShadow: "0 10px 20px rgba(0, 0, 0, 0.15)", // Add a shadow on hover
+                      boxShadow: "0 15px 30px rgba(0, 0, 0, 0.3)", // Strong shadow for hover
+                      border: "3px solid #d32f2f", // Red border on hover for intensity
                     },
                   }}
                   component={motion.div}
@@ -93,7 +122,7 @@ const Reviews = () => {
                       height: 80,
                       margin: "auto",
                       mb: 2,
-                      border: "3px solid #d32f2f",
+                      border: "3px solid #d32f2f", // Red border for avatar
                     }}
                   />
                   <CardContent sx={{ flex: 1 }}>
@@ -108,7 +137,7 @@ const Reviews = () => {
                       sx={{
                         mb: 2,
                         "& .MuiRating-iconFilled": {
-                          color: "#d32f2f",
+                          color: "#d32f2f", // Red stars
                         },
                       }}
                     />
@@ -122,7 +151,7 @@ const Reviews = () => {
 
                   {/* Star Icon on top-left corner */}
                   <Box sx={{ position: "absolute", top: -15, left: -15 }}>
-                    <IconButton sx={{ color: "#d32f2f", fontSize: 40 }}>
+                    <IconButton sx={{ color: "#f1c40f", fontSize: 40 }}>
                       <Star />
                     </IconButton>
                   </Box>
