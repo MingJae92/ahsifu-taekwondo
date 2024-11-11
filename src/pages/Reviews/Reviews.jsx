@@ -8,7 +8,6 @@ import {
   Avatar,
   Rating,
   Box,
-  IconButton,
 } from "@mui/material";
 import { Star } from "@mui/icons-material";
 import Navbar from "../../components/Navbar/Navbar";
