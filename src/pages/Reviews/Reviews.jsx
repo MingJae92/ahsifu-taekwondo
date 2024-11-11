@@ -113,8 +113,12 @@ const Reviews = () => {
         </Grid>
       </Container>
 
-      {/* Footer positioned below the content */}
-      <Footer />
+      {/* Footer outside of the container to be full-width */}
+      <Box sx={{ width: '100vw', bgcolor: 'background.paper', mt: 4 }}>
+        <Container maxWidth={false} disableGutters>
+          <Footer />
+        </Container>
+      </Box>
     </Box>
   );
 };
