@@ -13,6 +13,7 @@ import {
 import { Star } from "@mui/icons-material";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import { motion } from "framer-motion"; // Import Framer Motion
 
 const reviews = [
   { name: "John Doe", avatar: "https://randomuser.me/api/portraits/men/1.jpg", rating: 5, review: "Joining this dojo has been life-changing! The instructors are top-notch.", trainingDuration: "2 years" },
@@ -58,69 +59,81 @@ const Reviews = () => {
         <Grid container spacing={4} justifyContent="center">
           {reviews.map((review, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
-              <Card
-                sx={{
-                  boxShadow: 3,
-                  borderRadius: "16px", // Rounded corners
-                  height: 300, // Fixed height
-                  width: "100%", // Ensure width is 100% of the grid item
-                  backgroundColor: "#fff",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                  overflow: "hidden", // Prevents overflow
-                  textAlign: "center",
-                  position: "relative", // Allows absolute positioning of the star
-                }}
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, type: "spring", stiffness: 100 }}
               >
-                <Avatar
-                  src={review.avatar}
-                  alt={review.name}
+                <Card
                   sx={{
-                    width: 80,
-                    height: 80,
-                    margin: "auto",
-                    mb: 2,
-                    border: "3px solid #d32f2f",
+                    boxShadow: 3,
+                    borderRadius: "16px", // Rounded corners
+                    height: 300, // Fixed height
+                    width: "100%", // Ensure width is 100% of the grid item
+                    backgroundColor: "#fff",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                    overflow: "hidden", // Prevents overflow
+                    textAlign: "center",
+                    position: "relative", // Allows absolute positioning of the star
+                    "&:hover": {
+                      transform: "scale(1.05)", // Scale up on hover
+                      boxShadow: "0 10px 20px rgba(0, 0, 0, 0.15)", // Add a shadow on hover
+                    },
                   }}
-                />
-                <CardContent sx={{ flex: 1 }}>
-                  <Typography variant="h6" fontWeight="bold" gutterBottom>
-                    {review.name}
-                  </Typography>
-                  <Rating
-                    name="read-only"
-                    value={review.rating}
-                    readOnly
-                    size="large"
+                  component={motion.div}
+                  whileHover={{ scale: 1.05, transition: { duration: 0.3 } }} // Smooth hover scale animation
+                >
+                  <Avatar
+                    src={review.avatar}
+                    alt={review.name}
                     sx={{
+                      width: 80,
+                      height: 80,
+                      margin: "auto",
                       mb: 2,
-                      "& .MuiRating-iconFilled": {
-                        color: "#d32f2f",
-                      },
+                      border: "3px solid #d32f2f",
                     }}
                   />
-                  <Typography variant="body2" color="textSecondary" paragraph>
-                    "{review.review}"
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary" paragraph>
-                    Training Duration: {review.trainingDuration}
-                  </Typography>
-                </CardContent>
+                  <CardContent sx={{ flex: 1 }}>
+                    <Typography variant="h6" fontWeight="bold" gutterBottom>
+                      {review.name}
+                    </Typography>
+                    <Rating
+                      name="read-only"
+                      value={review.rating}
+                      readOnly
+                      size="large"
+                      sx={{
+                        mb: 2,
+                        "& .MuiRating-iconFilled": {
+                          color: "#d32f2f",
+                        },
+                      }}
+                    />
+                    <Typography variant="body2" color="textSecondary" paragraph>
+                      "{review.review}"
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" paragraph>
+                      Training Duration: {review.trainingDuration}
+                    </Typography>
+                  </CardContent>
 
-                {/* Star Icon on top-left corner */}
-                <Box sx={{ position: "absolute", top: -15, left: -15 }}>
-                  <IconButton sx={{ color: "#d32f2f", fontSize: 40 }}>
-                    <Star />
-                  </IconButton>
-                </Box>
-              </Card>
+                  {/* Star Icon on top-left corner */}
+                  <Box sx={{ position: "absolute", top: -15, left: -15 }}>
+                    <IconButton sx={{ color: "#d32f2f", fontSize: 40 }}>
+                      <Star />
+                    </IconButton>
+                  </Box>
+                </Card>
+              </motion.div>
             </Grid>
           ))}
         </Grid>
       </Container>
 
-      {/* Footer outside of the container to be full-width */}
+      {/* Footer */}
       <Box sx={{ width: '100vw', bgcolor: 'background.paper', mt: 4 }}>
         <Container maxWidth={false} disableGutters>
           <Footer />
