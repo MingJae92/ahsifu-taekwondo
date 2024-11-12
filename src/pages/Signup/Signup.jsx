@@ -18,13 +18,16 @@ const Signup = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center", // Center the content horizontally and vertically
           minHeight: "100vh", // Ensure the container takes full height
+          pt: 10, // Added padding-top for breathing space outside the container
+          mx: "auto", // Horizontal centering
         }}
       >
         {/* Main Content Section */}
         <Box
           sx={{
-            flex: 1, // This makes sure the content takes the remaining space
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -33,12 +36,16 @@ const Signup = () => {
             p: 4,
             borderRadius: "12px",
             pb: 10, // Padding to avoid form overlap with footer
+            maxWidth: "lg", // Optional: restrict the max width of content
+            width: "100%", // Ensure it takes full width of the container
+            margin: "auto", // Ensure the form and image are centered horizontally
           }}
         >
           <Grid container spacing={4} alignItems="center">
             {/* Signup Form Section */}
             <Grid item xs={12} md={6}>
-              <Box sx={{ textAlign: "center" }}>
+              <Box sx={{ textAlign: "center", p: 3, pt: 5 }}>
+                {/* Added pt: 5 for breathing space inside the box */}
                 <Typography variant="h4" gutterBottom>
                   Sign Up
                 </Typography>
@@ -105,7 +112,8 @@ const Signup = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  p: 2,
+                  p: 3, // Equal padding for the image placeholder
+                  pt: 5, // Breathing space at the top of the placeholder
                 }}
               >
                 <Typography variant="h6" color="text.secondary">
@@ -117,14 +125,12 @@ const Signup = () => {
         </Box>
 
         {/* Footer */}
-        
-          <Box sx={{ width: "100vw", bgcolor: "background.paper", mt: 4 }}>
-            <Container maxWidth={false} disableGutters>
-              <Footer />
-            </Container>
-          </Box>
+        <Box sx={{ width: "100vw", bgcolor: "background.paper", mt: 4 }}>
+          <Container maxWidth={false} disableGutters>
+            <Footer />
+          </Container>
         </Box>
-    
+      </Box>
     </>
   );
 };
