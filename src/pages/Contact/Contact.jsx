@@ -32,7 +32,7 @@ const Contact = () => {
           flex: "1 0 auto",
           display: "flex",
           justifyContent: "center",
-          mt: 5,
+          mt: 8, // Margin-top for space between Navbar and form
         }}
       >
         <Box
@@ -41,6 +41,7 @@ const Contact = () => {
             color: "#fff",
             borderRadius: 3,
             p: 5,
+            py: 8, // Equal top and bottom padding
             boxShadow: "0px 6px 24px rgba(0,0,0,0.6)",
             maxWidth: 600,
             textAlign: "center",
@@ -154,9 +155,7 @@ const Contact = () => {
       </Container>
 
       {/* Footer */}
-      
-
-      <Box sx={{ width: '100vw', bgcolor: 'background.paper', mt: 4 }}>
+      <Box sx={{ width: "100vw", bgcolor: "background.paper", mt: 4 }}>
         <Container maxWidth={false} disableGutters>
           <Footer />
         </Container>

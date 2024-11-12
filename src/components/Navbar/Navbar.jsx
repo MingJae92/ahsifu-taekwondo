@@ -104,6 +104,7 @@ function Navbar() {
 
           {/* Sign Up and Log In Buttons */}
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
+            <Link to="/login">
             <Button
               variant="outlined"
               sx={{
@@ -114,6 +115,7 @@ function Navbar() {
             >
               Log In
             </Button>
+            </Link>
             <Button
               variant="contained"
               sx={{ textTransform: "none", backgroundColor: "#fbc02d" }}
