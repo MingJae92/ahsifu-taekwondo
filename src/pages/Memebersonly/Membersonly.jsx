@@ -8,36 +8,32 @@ import {
   Grid,
   Avatar,
   Box,
+  Button,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
+import Carousel from 'react-material-ui-carousel';
 
-// Sample member data with 20 entries
+// Sample member data
 const members = [
   { id: 1, name: 'John Doe', rank: 'Black Belt', avatar: 'https://via.placeholder.com/150' },
-  { id: 2, name: 'Jane Smith', rank: 'Brown Belt', avatar: 'https://via.placeholder.com/150' },
-  { id: 3, name: 'Jake Lee', rank: 'Green Belt', avatar: 'https://via.placeholder.com/150' },
-  { id: 4, name: 'Emily Davis', rank: 'Purple Belt', avatar: 'https://via.placeholder.com/150' },
-  { id: 5, name: 'Michael Brown', rank: 'Blue Belt', avatar: 'https://via.placeholder.com/150' },
-  { id: 6, name: 'Sara White', rank: 'Yellow Belt', avatar: 'https://via.placeholder.com/150' },
-  { id: 7, name: 'Chris Green', rank: 'Orange Belt', avatar: 'https://via.placeholder.com/150' },
-  { id: 8, name: 'Anna Black', rank: 'Black Belt', avatar: 'https://via.placeholder.com/150' },
-  { id: 9, name: 'Tom Wilson', rank: 'Brown Belt', avatar: 'https://via.placeholder.com/150' },
-  { id: 10, name: 'Sophia Kim', rank: 'Green Belt', avatar: 'https://via.placeholder.com/150' },
-  { id: 11, name: 'David Martinez', rank: 'Purple Belt', avatar: 'https://via.placeholder.com/150' },
-  { id: 12, name: 'Laura Clark', rank: 'Blue Belt', avatar: 'https://via.placeholder.com/150' },
-  { id: 13, name: 'James King', rank: 'Yellow Belt', avatar: 'https://via.placeholder.com/150' },
-  { id: 14, name: 'Lisa Adams', rank: 'Orange Belt', avatar: 'https://via.placeholder.com/150' },
-  { id: 15, name: 'Mark Scott', rank: 'Black Belt', avatar: 'https://via.placeholder.com/150' },
-  { id: 16, name: 'Paula Young', rank: 'Brown Belt', avatar: 'https://via.placeholder.com/150' },
-  { id: 17, name: 'Brian Thompson', rank: 'Green Belt', avatar: 'https://via.placeholder.com/150' },
-  { id: 18, name: 'Jessica Turner', rank: 'Purple Belt', avatar: 'https://via.placeholder.com/150' },
-  { id: 19, name: 'Henry Perez', rank: 'Blue Belt', avatar: 'https://via.placeholder.com/150' },
-  { id: 20, name: 'Olivia Stewart', rank: 'Yellow Belt', avatar: 'https://via.placeholder.com/150' },
+  // Add more members as needed
 ];
 
-// Styled components
+// Hero section with background image
+const HeroSection = styled(Box)(({ theme }) => ({
+  height: '50vh',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundImage: 'url(https://via.placeholder.com/1200x600)',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  color: theme.palette.common.white,
+}));
+
+// Styled card for team members
 const StyledCard = styled(Card)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
@@ -46,13 +42,49 @@ const StyledCard = styled(Card)(({ theme }) => ({
 }));
 
 const Membersonly = () => {
+  const carouselItems = [
+    { image: 'https://via.placeholder.com/1200x600', caption: 'Excellence in Martial Arts' },
+    { image: 'https://via.placeholder.com/1200x600', caption: 'Train with the Best' },
+    { image: 'https://via.placeholder.com/1200x600', caption: 'Achieve Your Goals' },
+  ];
+
   return (
     <Box display="flex" flexDirection="column" minHeight="100vh">
       <Navbar />
-      <Container
-        component="main"
-        sx={{ flexGrow: 1, padding: 0 }}  // Remove padding to avoid gaps
-      >
+      
+      {/* Hero Section */}
+      <HeroSection>
+        <Typography variant="h2" align="center">
+          Welcome to Our Martial Arts Community
+        </Typography>
+      </HeroSection>
+
+      {/* Carousel Section */}
+      <Container sx={{ py: 4 }}>
+        <Carousel>
+          {carouselItems.map((item, index) => (
+            <Box
+              key={index}
+              sx={{
+                height: '30vh',
+                backgroundImage: `url(${item.image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <Typography variant="h4" color="common.white" align="center" sx={{ bgcolor: 'rgba(0, 0, 0, 0.6)', p: 2 }}>
+                {item.caption}
+              </Typography>
+            </Box>
+          ))}
+        </Carousel>
+      </Container>
+
+      {/* Main Content - Members Section */}
+      <Container component="main" sx={{ flexGrow: 1, py: 4 }}>
         <Box textAlign="center" my={4}>
           <Typography variant="h3" component="h1" gutterBottom>
             Martial Arts Members
@@ -82,20 +114,12 @@ const Membersonly = () => {
           ))}
         </Grid>
       </Container>
-      {/* Full-width fixed Footer, flush with the bottom */}
-      <Box
-        component="footer"
-        sx={{
-          width: '100%',
-          bgcolor: 'background.paper',
-          py: 2,
-          position: 'fixed',
-          bottom: 0,
-          left: 0,
-          zIndex: 1300,  // Ensures it’s above other content
-        }}
-      >
-        <Footer />
+
+      {/* Footer */}
+      <Box sx={{ width: "100vw", bgcolor: "background.paper", mt: 4 }}>
+        <Container maxWidth={false} disableGutters>
+          <Footer />
+        </Container>
       </Box>
     </Box>
   );
