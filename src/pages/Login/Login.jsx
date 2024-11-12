@@ -20,7 +20,7 @@ function Login() {
     <Box sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
       {/* Navbar stays at the top */}
       <Navbar />
-      
+
       {/* Main Content */}
       <Container
         maxWidth="xl"
@@ -36,7 +36,7 @@ function Login() {
           paddingBottom: "60px", // Make space for the fixed footer
         }}
       >
-        <Grid container spacing={0} sx={{ width: "100%", justifyContent: "center" }}>
+        <Grid container spacing={2} sx={{ width: "100%" }}>
           {/* Left Side - Login Form */}
           <Grid
             item
@@ -46,7 +46,6 @@ function Login() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              minHeight: "100vh", // Ensure the form takes at least full viewport height
             }}
           >
             <Card
@@ -182,13 +181,29 @@ function Login() {
               </CardContent>
             </Card>
           </Grid>
+
+          {/* Right Side - Image Placeholder */}
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundImage: "url(https://example.com/your-image.jpg)", // Placeholder image URL
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              minHeight: "100vh",
+            }}
+          />
         </Grid>
       </Container>
 
       {/* Fixed Footer */}
       <Box
         sx={{
-          position: "fixed",
+          position: "relative",
           bottom: 0,
           left: 0,
           width: "100%",
@@ -196,9 +211,11 @@ function Login() {
           zIndex: 1, // To make sure the footer is above other content
         }}
       >
-        <Container maxWidth={false} disableGutters>
-          <Footer />
-        </Container>
+         <Box sx={{ width: "100vw", bgcolor: "background.paper", mt: 4 }}>
+          <Container maxWidth={false} disableGutters>
+            <Footer />
+          </Container>
+        </Box>
       </Box>
     </Box>
   );
