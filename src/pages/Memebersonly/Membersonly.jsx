@@ -43,9 +43,26 @@ const StyledCard = styled(Card)(({ theme }) => ({
 
 const Membersonly = () => {
   const carouselItems = [
-    { image: 'https://via.placeholder.com/1200x600', caption: 'Excellence in Martial Arts' },
-    { image: 'https://via.placeholder.com/1200x600', caption: 'Train with the Best' },
-    { image: 'https://via.placeholder.com/1200x600', caption: 'Achieve Your Goals' },
+    { id: 1, name: 'John Doe', rank: 'Black Belt', avatar: 'https://via.placeholder.com/150' },
+  { id: 2, name: 'Jane Smith', rank: 'Red Belt', avatar: 'https://via.placeholder.com/150' },
+  { id: 3, name: 'Tom Brown', rank: 'Blue Belt', avatar: 'https://via.placeholder.com/150' },
+  { id: 4, name: 'Emily Davis', rank: 'Green Belt', avatar: 'https://via.placeholder.com/150' },
+  { id: 5, name: 'James Wilson', rank: 'Black Belt', avatar: 'https://via.placeholder.com/150' },
+  { id: 6, name: 'Olivia Johnson', rank: 'Purple Belt', avatar: 'https://via.placeholder.com/150' },
+  { id: 7, name: 'Liam Martinez', rank: 'Brown Belt', avatar: 'https://via.placeholder.com/150' },
+  { id: 8, name: 'Sophia Anderson', rank: 'Yellow Belt', avatar: 'https://via.placeholder.com/150' },
+  { id: 9, name: 'Mason Thompson', rank: 'Orange Belt', avatar: 'https://via.placeholder.com/150' },
+  { id: 10, name: 'Isabella Garcia', rank: 'Red Belt', avatar: 'https://via.placeholder.com/150' },
+  { id: 11, name: 'Ethan Harris', rank: 'Black Belt', avatar: 'https://via.placeholder.com/150' },
+  { id: 12, name: 'Ava Clark', rank: 'Green Belt', avatar: 'https://via.placeholder.com/150' },
+  { id: 13, name: 'Alexander Lewis', rank: 'Blue Belt', avatar: 'https://via.placeholder.com/150' },
+  { id: 14, name: 'Mia Walker', rank: 'Purple Belt', avatar: 'https://via.placeholder.com/150' },
+  { id: 15, name: 'Charlotte Hall', rank: 'Yellow Belt', avatar: 'https://via.placeholder.com/150' },
+  { id: 16, name: 'Lucas Young', rank: 'Orange Belt', avatar: 'https://via.placeholder.com/150' },
+  { id: 17, name: 'Amelia King', rank: 'Black Belt', avatar: 'https://via.placeholder.com/150' },
+  { id: 18, name: 'Benjamin Wright', rank: 'Red Belt', avatar: 'https://via.placeholder.com/150' },
+  { id: 19, name: 'Ella Scott', rank: 'Green Belt', avatar: 'https://via.placeholder.com/150' },
+  { id: 20, name: 'Henry Adams', rank: 'Blue Belt', avatar: 'https://via.placeholder.com/150' },
   ];
 
   return (
