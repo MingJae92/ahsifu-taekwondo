@@ -136,7 +136,14 @@ const Footer = () => {
                       input: { color: 'black' },
                     }}
                   />
-                  <Button variant="contained" color="primary" size="small">
+                  <Button
+                    variant="contained"
+                    sx={{
+                      backgroundColor: '#fbc02d', // Navbar button color
+                      textTransform: 'none',
+                      color: 'black', // Text color in the button
+                    }}
+                  >
                     Subscribe
                   </Button>
                 </Box>
@@ -159,7 +166,7 @@ const Footer = () => {
                   fontWeight: 'bold',
                 }}
               >
-                © {new Date().getFullYear()} Denton. All rights reserved.
+                © {new Date().getFullYear()} AH SIFU TAEKWONDO, All rights reserved.
               </Typography>
             </Box>
           </motion.div>
