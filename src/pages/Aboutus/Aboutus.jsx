@@ -96,7 +96,7 @@ const Aboutus = () => {
             {/* Instructor 2 */}
             <Grid item xs={12} md={4}>
               <Card component={motion.div} whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }}>
-                <CardMedia component="img" height="300" image="" alt="Instructor 2" />
+                <CardMedia component="img" height="300" image="https://media.gettyimages.com/id/81952608/photo/birmingham-united-kingdom-roger-hammond-of-the-british-olympic-cycling-team-poses-for-a.jpg?s=612x612&w=gi&k=20&c=hlgNFn9u9Qvy_1g_8nIfn4BNWSRblV13Csxv6NH6kzY=" alt="Instructor 2" />
                 <CardContent>
                   <Typography variant="h5" color="error">
                     Instructor 2
@@ -111,7 +111,7 @@ const Aboutus = () => {
             {/* Instructor 3 */}
             <Grid item xs={12} md={4}>
               <Card component={motion.div} whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }}>
-                <CardMedia component="img" height="300" image="" alt="Instructor 3" />
+                <CardMedia component="img" height="300" image="https://c8.alamy.com/comp/GCR7XA/high-performance-coach-at-gb-taekwondo-nelson-miller-during-the-team-GCR7XA.jpg" alt="Instructor 3" />
                 <CardContent>
                   <Typography variant="h5" color="error">
                     Instructor 3

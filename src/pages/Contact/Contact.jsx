@@ -137,29 +137,29 @@ const Contact = () => {
             </Slide>
           </Grid>
 
-          {/* Image Placeholder */}
+          {/* Image Section */}
           <Grid item xs={12} md={6} sx={{ mt: 5, mb: 5 }}>
             <Box
               sx={{
-                backgroundColor: "#2a2a2a",
                 height: "100%",
+                width: "100%",
                 borderRadius: 4,
                 boxShadow: "0px 8px 30px rgba(0,0,0,0.5)",
                 display: "flex",
-                alignItems: "center",
                 justifyContent: "center",
+                alignItems: "center",
+                overflow: "hidden",
               }}
             >
-              <Typography
-                variant="h6"
-                color="text.secondary"
-                sx={{
-                  fontFamily: "serif",
-                  color: "#bbbbbb",
+              <img
+                src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/08/09/12/taekwondo-5271.jpg"
+                alt="Martial Arts"
+                style={{
+                  width: "100%",
+                  height: "97vh",
+                  objectFit: "cover", 
                 }}
-              >
-                Image Placeholder
-              </Typography>
+              />
             </Box>
           </Grid>
         </Grid>
