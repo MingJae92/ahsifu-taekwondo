@@ -60,7 +60,7 @@ const Footer = () => {
                 >
                   Quick Links
                 </Typography>
-                {["About us", "Careers", "Contact Us", "Privacy Policy"].map((text) => (
+                {[ "Contact Us", "Privacy Policy"].map((text) => (
                   <Box key={text} sx={{ mb: 1 }}>
                     <Link href="#" color="inherit" underline="hover">
                       {text}

@@ -31,7 +31,7 @@ const Aboutus = () => {
         <Grid container spacing={4} alignItems="center">
           {/* Image Section */}
           <Grid item xs={12} md={6}>
-            <Box component={motion.img} whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }} src="https://via.placeholder.com/600x400" alt="Martial Arts" sx={{ width: '100%', borderRadius: 2, boxShadow: 3, p: 2 }} />
+            <Box component={motion.img} whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }} src="https://cdn.relaxdays.com/media/catalog/product/cache/edb9efdaeaa91af549786f6800a64891/1/0/10043356_0_3_99f7df5cf4cf8d4389893182d2c43928.jpg" alt="Martial Arts" sx={{ width: '100%', borderRadius: 2, boxShadow: 3, p: 2 }} />
             
             {/* Additional Image Placeholder */}
             <Box component={motion.img} mt={2} whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }} src="https://via.placeholder.com/600x300" alt="Martial Arts" sx={{ width: '100%', borderRadius: 2, boxShadow: 3, p: 2 }} />
@@ -77,24 +77,54 @@ const Aboutus = () => {
           <Typography variant="h4" color="error" gutterBottom textAlign="center">
             Meet Our Instructors
           </Typography>
-          <Grid container spacing={4}>
-            {[1, 2, 3].map((instructor) => (
-              <Grid item xs={12} md={4} key={instructor}>
-                <Card component={motion.div} whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }}>
-                  <CardMedia component="img" height="300" image="https://via.placeholder.com/300x300" alt={`Instructor ${instructor}`} />
-                  <CardContent>
-                    <Typography variant="h5" color="error">
-                      Instructor {instructor}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary">
-                      Specialist in sparring and self-defense with over 15 years of experience.
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
+          <Grid container spacing={4} justifyContent="space-between">
+            {/* Instructor 1 */}
+            <Grid item xs={12} md={4}>
+              <Card component={motion.div} whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }}>
+                <CardMedia component="img" height="300" image="https://images.static.press.net/v2/image/preview/dfb8b8e9d4ff80f4eb417808d8871498/2.28041249.jpg" alt="Instructor 1" />
+                <CardContent>
+                  <Typography variant="h5" color="error">
+                    Instructor 1
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary">
+                    Specialist in sparring and self-defense with over 15 years of experience.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+
+            {/* Instructor 2 */}
+            <Grid item xs={12} md={4}>
+              <Card component={motion.div} whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }}>
+                <CardMedia component="img" height="300" image="" alt="Instructor 2" />
+                <CardContent>
+                  <Typography variant="h5" color="error">
+                    Instructor 2
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary">
+                    Expert in taekwondo forms and mental conditioning, with over 12 years of experience.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+
+            {/* Instructor 3 */}
+            <Grid item xs={12} md={4}>
+              <Card component={motion.div} whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }}>
+                <CardMedia component="img" height="300" image="" alt="Instructor 3" />
+                <CardContent>
+                  <Typography variant="h5" color="error">
+                    Instructor 3
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary">
+                    Specializes in combat techniques and personal growth through martial arts.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
           </Grid>
         </Box>
+
 
         {/* Taekwondo Information Section */}
         <Box mt={8} textAlign="center" sx={{ px: 3 }}>
