@@ -18,9 +18,9 @@ const Signup = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          minHeight: "100vh",
+          justifyContent: "center", // Vertically centers
+          alignItems: "center", // Horizontally centers
+          minHeight: "100vh", // Takes up full viewport height
           pt: 15,
           pb: 4, // Equal padding at the bottom
           bgcolor: "#1c1c1c",
@@ -39,6 +39,7 @@ const Signup = () => {
             width: "100%",
             maxWidth: "md", // Limits the overall width for centering effect
             mx: "auto", // Center the box horizontally
+            minHeight: "400px", // Ensures the box has a minimum height to stay centered
           }}
         >
           <Grid container spacing={4} alignItems="center">
@@ -125,26 +126,7 @@ const Signup = () => {
 
             {/* Image Placeholder Section */}
             <Grid item xs={12} md={6}>
-              <Box
-                sx={{
-                  height: "100%",
-                  width: "100%",
-                  bgcolor: "grey.300",
-                  borderRadius: "12px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  p: 3,
-                  backgroundImage: 'url("path/to/martial-arts-image.jpg")',
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  color: "white",
-                }}
-              >
-                <Typography variant="h6" sx={{ fontFamily: "'Roboto Slab', serif" }}>
-                  Awaken the warrior within.
-                </Typography>
-              </Box>
+              {/* Image or additional content can be placed here */}
             </Grid>
           </Grid>
         </Box>

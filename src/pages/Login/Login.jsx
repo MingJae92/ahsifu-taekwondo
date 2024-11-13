@@ -33,13 +33,23 @@ function Login() {
           backgroundImage: "url(https://example.com/Dojang-background.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          pt: { xs: 10, md: 12 }, // Added padding-top to create space between navbar and form
-          pb: { xs: 8, md: 10 }, // Responsive bottom padding
-          mx: { xs: 2, md: 4 }, // Apply equal margin outside the container
-          marginTop: { xs: "70px", md: "100px" }, // Ensure the container is pushed down below the navbar
+          pt: { xs: 10, md: 12 },
+          pb: { xs: 8, md: 10 },
+          mx: { xs: 2, md: 4 },
+          marginTop: { xs: "70px", md: "100px" },
         }}
       >
-        <Grid container spacing={2} sx={{ width: "100%", alignItems: "center" }}>
+        <Grid
+          container
+          spacing={2}
+          sx={{
+            width: "100%",
+            justifyContent: "center",
+            alignItems: "center",
+            display: "flex", // Ensures the container uses flexbox
+            height: "100%", // Ensures the grid takes up full height of its container
+          }}
+        >
           {/* Left Side - Login Form */}
           <Grid
             item
@@ -50,7 +60,7 @@ function Login() {
               justifyContent: "center",
               alignItems: "center",
               height: "100%",
-              padding: { xs: 2, md: 4 }, // Equal padding for all screen sizes
+              padding: { xs: 2, md: 4 },
             }}
           >
             <Card
@@ -66,10 +76,18 @@ function Login() {
             >
               <CardContent sx={{ textAlign: "center" }}>
                 <Box sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
-                  <SportsMartialArtsIcon sx={{ fontSize: 50, color: "#FF0000" }} />
+                  <SportsMartialArtsIcon
+                    sx={{ fontSize: 50, color: "#FF0000" }}
+                  />
                 </Box>
 
-                <Typography variant="h4" component="h1" fontWeight="700" gutterBottom sx={{ color: "#FF0000" }}>
+                <Typography
+                  variant="h4"
+                  component="h1"
+                  fontWeight="700"
+                  gutterBottom
+                  sx={{ color: "#FF0000" }}
+                >
                   Enter the Dojang
                 </Typography>
                 <Typography variant="body2" color="grey.300" sx={{ mb: 3 }}>
@@ -105,7 +123,11 @@ function Login() {
                     sx={{ mb: 2, bgcolor: "white", borderRadius: 1 }}
                     InputLabelProps={{ shrink: false }}
                     InputProps={{
-                      sx: { color: "black", padding: "12px 14px", height: "56px" },
+                      sx: {
+                        color: "black",
+                        padding: "12px 14px",
+                        height: "56px",
+                      },
                       placeholder: "Email",
                     }}
                   />
@@ -118,7 +140,11 @@ function Login() {
                     sx={{ mb: 1, bgcolor: "white", borderRadius: 1 }}
                     InputLabelProps={{ shrink: false }}
                     InputProps={{
-                      sx: { color: "black", padding: "12px 14px", height: "56px" },
+                      sx: {
+                        color: "black",
+                        padding: "12px 14px",
+                        height: "56px",
+                      },
                       placeholder: "Password",
                     }}
                   />
@@ -154,6 +180,31 @@ function Login() {
                 </Typography>
               </CardContent>
             </Card>
+          </Grid>
+
+          {/* Right Side - Image */}
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100%",
+            }}
+          >
+            <Box
+              sx={{
+                width: "100%",
+                height: "100%",
+                maxWidth: 500,
+                borderRadius: 2,
+                overflow: "hidden",
+              }}
+            >
+              {/* You can place an image here */}
+            </Box>
           </Grid>
         </Grid>
       </Container>
