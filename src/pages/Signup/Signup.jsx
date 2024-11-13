@@ -21,8 +21,8 @@ const Signup = () => {
           justifyContent: "center",
           alignItems: "center",
           minHeight: "100vh",
-          pt: 15, // Increased padding-top for more space between Navbar and content
-          mx: "auto",
+          pt: 15,
+          pb: 4, // Equal padding at the bottom
           bgcolor: "#1c1c1c",
         }}
       >
@@ -34,12 +34,11 @@ const Signup = () => {
             alignItems: "center",
             bgcolor: "#ffffff",
             boxShadow: 5,
-            p: 6, // Added extra padding for overall breathing space within content area
+            p: 6,
             borderRadius: "12px",
-            pb: 10,
-            maxWidth: "lg",
             width: "100%",
-            margin: "auto",
+            maxWidth: "md", // Limits the overall width for centering effect
+            mx: "auto", // Center the box horizontally
           }}
         >
           <Grid container spacing={4} alignItems="center">
