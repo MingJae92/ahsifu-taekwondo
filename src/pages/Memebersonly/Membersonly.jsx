@@ -330,7 +330,7 @@ const Membersonly = () => {
       {/* Hero Section */}
       <HeroSection>
         <Typography variant="h2" align="center">
-          Welcome to Our Martial Arts Community
+          Welcome to Our Martial Arts Community!!!
         </Typography>
       </HeroSection>
 
