@@ -137,13 +137,6 @@ const members = [
     rank: "Blue Belt",
     avatar: "https://via.placeholder.com/150",
   },
-  {
-    id: 21,
-    name: "Ah Sifu",
-    rank: "Black Belt 4th Dan!!!",
-    avatar: "https://via.placeholder.com/150",
-  },
-  // Add more members as needed
 ];
 
 // Hero section with background image
@@ -332,46 +325,66 @@ const Membersonly = () => {
 
       {/* Main Content - Members Section */}
       <Container component="main" sx={{ flexGrow: 1, py: 4 }}>
-        <Box textAlign="center" my={4}>
-          <Typography variant="h3" component="h1" gutterBottom>
-            Martial Arts Members
+        <Box sx={{ textAlign: "center" }}>
+          <Typography variant="h3" gutterBottom>
+            Meet Our Team Members
           </Typography>
-          <Typography variant="subtitle1" color="text.secondary">
-            Meet the team and their respective ranks
-          </Typography>
+          <Grid container spacing={4} justifyContent="center">
+            {members.map((member) => (
+              <Grid item key={member.id} xs={12} sm={6} md={4} lg={3}>
+                <StyledCard>
+                  <Avatar src={member.avatar} alt={member.name} sx={{ width: 56, height: 56, marginRight: 2 }} />
+                  <CardContent>
+                    <Typography variant="h5">{member.name}</Typography>
+                    <Typography color="textSecondary">{member.rank}</Typography>
+                  </CardContent>
+                </StyledCard>
+              </Grid>
+            ))}
+          </Grid>
         </Box>
 
-        <Grid container spacing={3}>
-          {members.map((member) => (
-            <Grid item xs={12} sm={6} md={4} key={member.id}>
-              <StyledCard>
-                <CardMedia>
-                  <Avatar
-                    src={member.avatar}
-                    alt={member.name}
-                    sx={{ width: 80, height: 80 }}
-                  />
-                </CardMedia>
-                <CardContent>
-                  <Typography variant="h6" component="div">
-                    {member.name}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Rank: {member.rank}
-                  </Typography>
-                </CardContent>
-              </StyledCard>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
+        {/* Video Placeholder */}
+        <Box sx={{ my: 6 }}>
+          <Typography variant="h4" align="center" gutterBottom>
+            Watch Our Training Video
+          </Typography>
+          <Box
+            sx={{
+              height: 400,
+              backgroundColor: "gray",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Typography color="white">Video Placeholder</Typography>
+          </Box>
+        </Box>
 
-      {/* Footer */}
-      <Box sx={{ width: "100vw", bgcolor: "background.paper", mt: 4 }}>
-        <Container maxWidth={false} disableGutters>
-          <Footer />
-        </Container>
-      </Box>
+        {/* Image Placeholder */}
+        <Box sx={{ my: 6 }}>
+          <Typography variant="h4" align="center" gutterBottom>
+            Our Latest Event
+          </Typography>
+          <Box
+            sx={{
+              height: 400,
+              backgroundColor: "gray",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Typography color="white">Image Placeholder</Typography>
+          </Box>
+        </Box>
+      </Container>
+      <Box sx={{ width: "100vw", bgcolor: "#1c1c1c", mt: 4 }}>
+          <Container maxWidth={false} disableGutters>
+            <Footer />
+          </Container>
+        </Box>
     </Box>
   );
 };

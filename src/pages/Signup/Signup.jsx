@@ -19,10 +19,11 @@ const Signup = () => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          alignItems: "center", // Center the content horizontally and vertically
-          minHeight: "100vh", // Ensure the container takes full height
-          pt: 10, // Added padding-top for breathing space outside the container
-          mx: "auto", // Horizontal centering
+          alignItems: "center",
+          minHeight: "100vh",
+          pt: 15, // Increased padding-top for more space between Navbar and content
+          mx: "auto",
+          bgcolor: "#1c1c1c",
         }}
       >
         {/* Main Content Section */}
@@ -31,26 +32,38 @@ const Signup = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            bgcolor: "background.paper",
-            boxShadow: 3,
-            p: 4,
+            bgcolor: "#ffffff",
+            boxShadow: 5,
+            p: 6, // Added extra padding for overall breathing space within content area
             borderRadius: "12px",
-            pb: 10, // Padding to avoid form overlap with footer
-            maxWidth: "lg", // Optional: restrict the max width of content
-            width: "100%", // Ensure it takes full width of the container
-            margin: "auto", // Ensure the form and image are centered horizontally
+            pb: 10,
+            maxWidth: "lg",
+            width: "100%",
+            margin: "auto",
           }}
         >
           <Grid container spacing={4} alignItems="center">
             {/* Signup Form Section */}
             <Grid item xs={12} md={6}>
               <Box sx={{ textAlign: "center", p: 3, pt: 5 }}>
-                {/* Added pt: 5 for breathing space inside the box */}
-                <Typography variant="h4" gutterBottom>
+                <Typography
+                  variant="h4"
+                  gutterBottom
+                  sx={{
+                    color: "#d32f2f",
+                    fontFamily: "'Roboto Condensed', sans-serif",
+                    fontWeight: "bold",
+                  }}
+                >
                   Sign Up
                 </Typography>
-                <Typography variant="body1" color="text.secondary" mb={3}>
-                  Create your account to get started.
+                <Typography
+                  variant="body1"
+                  color="text.secondary"
+                  mb={3}
+                  sx={{ fontFamily: "'Roboto Slab', serif" }}
+                >
+                  Begin your journey to mastery.
                 </Typography>
 
                 <form noValidate>
@@ -86,7 +99,17 @@ const Signup = () => {
                     sx={{ mb: 3 }}
                   />
 
-                  <Button variant="contained" fullWidth sx={{ mb: 2 }}>
+                  <Button
+                    variant="contained"
+                    fullWidth
+                    sx={{
+                      mb: 2,
+                      bgcolor: "#d32f2f",
+                      "&:hover": {
+                        bgcolor: "#b71c1c",
+                      },
+                    }}
+                  >
                     Sign Up
                   </Button>
 
@@ -112,12 +135,15 @@ const Signup = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  p: 3, // Equal padding for the image placeholder
-                  pt: 5, // Breathing space at the top of the placeholder
+                  p: 3,
+                  backgroundImage: 'url("path/to/martial-arts-image.jpg")',
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  color: "white",
                 }}
               >
-                <Typography variant="h6" color="text.secondary">
-                  Image Placeholder
+                <Typography variant="h6" sx={{ fontFamily: "'Roboto Slab', serif" }}>
+                  Awaken the warrior within.
                 </Typography>
               </Box>
             </Grid>
@@ -125,7 +151,7 @@ const Signup = () => {
         </Box>
 
         {/* Footer */}
-        <Box sx={{ width: "100vw", bgcolor: "background.paper", mt: 4 }}>
+        <Box sx={{ width: "100vw", bgcolor: "#1c1c1c", mt: 4 }}>
           <Container maxWidth={false} disableGutters>
             <Footer />
           </Container>
