@@ -391,7 +391,7 @@ const Membersonly = () => {
         {/* Video Placeholder */}
         <Box sx={{ my: 6 }}>
           <Typography variant="h4" align="center" gutterBottom>
-            Watch Our Training Video
+            Watch Our Training Video!!!
           </Typography>
           <Box
             sx={{
