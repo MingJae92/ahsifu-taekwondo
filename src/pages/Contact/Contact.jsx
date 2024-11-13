@@ -33,12 +33,12 @@ const Contact = () => {
           flex: "1 0 auto",
           display: "flex",
           justifyContent: "center",
-          pt: 10, // Top padding for breathing space
+          pt: 10,
         }}
       >
         <Grid container spacing={4} alignItems="center">
           {/* Form Section */}
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} sx={{ mt: 5, mb: 5 }}>
             <Slide direction="up" in={true} mountOnEnter unmountOnExit>
               <Box
                 sx={{
@@ -138,7 +138,7 @@ const Contact = () => {
           </Grid>
 
           {/* Image Placeholder */}
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} sx={{ mt: 5, mb: 5 }}>
             <Box
               sx={{
                 backgroundColor: "#2a2a2a",

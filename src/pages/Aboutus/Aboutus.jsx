@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Box, Typography, Grid, List, ListItem, ListItemText, Card, CardMedia, CardContent, Button } from '@mui/material';
+import { Container, Box, Typography, Grid, List, ListItem, ListItemText, Card, CardMedia, CardContent } from '@mui/material';
 import { motion, useInView } from 'framer-motion';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
@@ -31,15 +31,15 @@ const Aboutus = () => {
         <Grid container spacing={4} alignItems="center">
           {/* Image Section */}
           <Grid item xs={12} md={6}>
-            <Box component={motion.img} whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }} src="https://via.placeholder.com/600x400" alt="Martial Arts" sx={{ width: '100%', borderRadius: 2, boxShadow: 3 }} />
+            <Box component={motion.img} whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }} src="https://via.placeholder.com/600x400" alt="Martial Arts" sx={{ width: '100%', borderRadius: 2, boxShadow: 3, p: 2 }} />
             
             {/* Additional Image Placeholder */}
-            <Box component={motion.img} mt={2} whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }} src="https://via.placeholder.com/600x300" alt="Martial Arts" sx={{ width: '100%', borderRadius: 2, boxShadow: 3 }} />
+            <Box component={motion.img} mt={2} whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }} src="https://via.placeholder.com/600x300" alt="Martial Arts" sx={{ width: '100%', borderRadius: 2, boxShadow: 3, p: 2 }} />
           </Grid>
 
           {/* Text Content */}
           <Grid item xs={12} md={6}>
-            <Box component={motion.div} ref={missionRef} initial={{ opacity: 0, y: 30 }} animate={isMissionInView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.2, duration: 1 }}>
+            <Box component={motion.div} ref={missionRef} initial={{ opacity: 0, y: 30 }} animate={isMissionInView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.2, duration: 1 }} sx={{ p: 2 }}>
               <Typography variant="h4" color="error" gutterBottom component={motion.div} whileHover={{ scale: 1.02, color: '#ff5722' }} transition={{ type: 'spring', stiffness: 100 }}>
                 Our Mission
               </Typography>
@@ -48,7 +48,7 @@ const Aboutus = () => {
               </Typography>
             </Box>
 
-            <Box component={motion.div} ref={storyRef} initial={{ opacity: 0, y: 30 }} animate={isStoryInView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.4, duration: 1 }}>
+            <Box component={motion.div} ref={storyRef} initial={{ opacity: 0, y: 30 }} animate={isStoryInView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.4, duration: 1 }} sx={{ p: 2 }}>
               <Typography variant="h4" color="error" gutterBottom component={motion.div} whileHover={{ scale: 1.02, color: '#ff5722' }} transition={{ type: 'spring', stiffness: 100 }}>
                 Our Story
               </Typography>
@@ -57,7 +57,7 @@ const Aboutus = () => {
               </Typography>
             </Box>
 
-            <Box component={motion.div} ref={valuesRef} initial={{ opacity: 0, y: 30 }} animate={isValuesInView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.6, duration: 1 }}>
+            <Box component={motion.div} ref={valuesRef} initial={{ opacity: 0, y: 30 }} animate={isValuesInView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.6, duration: 1 }} sx={{ p: 2 }}>
               <Typography variant="h4" color="error" gutterBottom component={motion.div} whileHover={{ scale: 1.02, color: '#ff5722' }} transition={{ type: 'spring', stiffness: 100 }}>
                 Our Values
               </Typography>
@@ -73,7 +73,7 @@ const Aboutus = () => {
         </Grid>
 
         {/* Instructor Section */}
-        <Box mt={8}>
+        <Box mt={8} sx={{ p: 2 }}>
           <Typography variant="h4" color="error" gutterBottom textAlign="center">
             Meet Our Instructors
           </Typography>
@@ -97,7 +97,7 @@ const Aboutus = () => {
         </Box>
 
         {/* Taekwondo Information Section */}
-        <Box mt={8} textAlign="center">
+        <Box mt={8} textAlign="center" sx={{ px: 3 }}>
           <Typography variant="h4" color="error" gutterBottom>
             About Taekwondo
           </Typography>
@@ -107,11 +107,11 @@ const Aboutus = () => {
         </Box>
 
         {/* Video Placeholder Section */}
-        <Box mt={8}>
+        <Box mt={8} sx={{ px: 3 }}>
           <Typography variant="h4" color="error" gutterBottom textAlign="center">
             Video Highlights
           </Typography>
-          <Grid container spacing={4}>
+          <Grid container spacing={6}>
             {[1, 2, 3].map((video) => (
               <Grid item xs={12} md={4} key={video}>
                 <Box
@@ -126,6 +126,7 @@ const Aboutus = () => {
                     alignItems: 'center',
                     justifyContent: 'center',
                     borderRadius: 2,
+                    p: 2, // Padding inside each video placeholder
                   }}
                 >
                   <Typography variant="h6" color="textSecondary">
