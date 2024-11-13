@@ -12,11 +12,10 @@ const Footer = () => {
       <Box
         component="footer"
         sx={{
-          bgcolor: 'black',
-          color: 'white',
+          bgcolor: '#1C1C1C', // Matching Navbar background color
+          color: '#fbc02d', // Matching Navbar text color
           py: 2,
           width: '100%',
-          position: 'relative', // No fixed positioning
         }}
       >
         <Container maxWidth="lg">
@@ -28,7 +27,14 @@ const Footer = () => {
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <Typography variant="h6" gutterBottom>
+                <Typography
+                  variant="h6"
+                  gutterBottom
+                  sx={{
+                    fontFamily: "'Roboto', sans-serif", // Navbar typography
+                    fontWeight: 'bold',
+                  }}
+                >
                   About Ah Sifu Taekwondo
                 </Typography>
                 <Typography variant="body2" sx={{ color: 'white' }}>
@@ -44,7 +50,14 @@ const Footer = () => {
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <Typography variant="h6" gutterBottom>
+                <Typography
+                  variant="h6"
+                  gutterBottom
+                  sx={{
+                    fontFamily: "'Roboto', sans-serif", // Navbar typography
+                    fontWeight: 'bold',
+                  }}
+                >
                   Quick Links
                 </Typography>
                 {["About us", "Careers", "Contact Us", "Privacy Policy"].map((text) => (
@@ -64,7 +77,14 @@ const Footer = () => {
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <Typography variant="h6" gutterBottom>
+                <Typography
+                  variant="h6"
+                  gutterBottom
+                  sx={{
+                    fontFamily: "'Roboto', sans-serif", // Navbar typography
+                    fontWeight: 'bold',
+                  }}
+                >
                   Contact Us
                 </Typography>
                 <Typography variant="body2" sx={{ color: 'white', mb: 1 }}>
@@ -86,7 +106,14 @@ const Footer = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <Typography variant="h6" gutterBottom>
+                <Typography
+                  variant="h6"
+                  gutterBottom
+                  sx={{
+                    fontFamily: "'Roboto', sans-serif", // Navbar typography
+                    fontWeight: 'bold',
+                  }}
+                >
                   Subscribe to Our Newsletter
                 </Typography>
                 <Typography variant="body2" sx={{ color: 'white', mb: 2 }}>
@@ -124,7 +151,14 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
           >
             <Box textAlign="center" pt={2} borderTop={1} borderColor="grey.800">
-              <Typography variant="body2" sx={{ color: 'white' }}>
+              <Typography
+                variant="body2"
+                sx={{
+                  color: 'white',
+                  fontFamily: "'Roboto', sans-serif", // Navbar typography
+                  fontWeight: 'bold',
+                }}
+              >
                 © {new Date().getFullYear()} Denton. All rights reserved.
               </Typography>
             </Box>
